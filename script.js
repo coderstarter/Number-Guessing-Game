@@ -16,6 +16,7 @@ function check(e) {
             chances_left.classList.remove('wrong')
             chances_left.innerText = 'User entered correct number';
             chances = 0;
+            return;
         } if (guessed_number > random_number) {
             chances_left.classList.remove('right');
             chances_left.classList.add('wrong')
@@ -27,6 +28,17 @@ function check(e) {
         }
         chances--;
         count.innerText = `Chances left ${chances}`;
+    }
+    if(chances == 0){
+        btn.disabled = true;
+        chances_left.disabled = true;
+        let userChoice = confirm('Do you want to play the game again !');
+        if(userChoice) {
+            btn.disabled = false;
+            chances_left.disabled = false;
+            chances = 10;
+            count.innerText = `Chances left ${chances}`;
+        }
     }
 }
 btn.addEventListener('click', check);
