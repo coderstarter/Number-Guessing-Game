@@ -17,3 +17,27 @@
   margin: 0; /* Remove any default margin on the paragraph element */
   padding-right: 10px; /* Add some spacing between the text and the input */
 }
+#chance{
+  height: 50px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  overflow: wrap;
+}
+#chances , #count{
+  text-overflow: inherit;
+  font-size: small;
+}
+#count{
+  position: relative;
+  padding-left: 10px;
+  height: 30px;
+  width: 60px;
+}
+.wrong{
+  color : red;
+}
+
+.right {
+  color: green;
+}
