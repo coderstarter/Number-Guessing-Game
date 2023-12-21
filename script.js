@@ -5,7 +5,7 @@ let chances_left = document.getElementById('chances');
 let count = document.getElementById('count');
 let chances = 10;
 function check(e) {
-    e.stopPropagation();
+    // e.stopPropagation();
     let userNumber = document.getElementById("user-input");
     let guessed_number = userNumber.value;
     console.log(guessed_number);
